@@ -1,0 +1,80 @@
+@media (max-width: 41200px) {
+    .companyDetail {
+        width: 30%;
+        height: 230px;
+    }
+
+    .createAnnotation {
+        width: 70%;
+        height: 230px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .companyDetail {
+        width: 30%;
+        height: 230px;
+    }
+
+    .createAnnotation {
+        width: 70%;
+        height: 230px;
+    }
+}
+
+@media (max-width: 950px) {
+    .companyDetail {
+        width: 100%;
+        height: 180px;
+    }
+
+    .createAnnotation {
+        width: 100%;
+        height: 230px;
+    }
+}
+
+.annotation {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    text-align: left;
+    padding: 10px;
+}
+
+.topContainer {
+    width: 69%;
+}
+
+.annotation > h1 {
+    font-size: 1.2em;
+}
+
+
+.createAnnotation > form > textarea {
+    height: 90px;
+    margin-bottom: -10px;
+}
+
+
+.annotationTable {
+    width: 68%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.contentAnnotation {
+    white-space: pre-wrap;
+    margin-top: 15px;
+}
+
+#annotationRelative {
+    position: relative;
+}
+
+#backIconAnnotation {
+    position: absolute;
+    top: 0.5%;
+    left: 5%;
+}

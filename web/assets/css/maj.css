@@ -1,0 +1,39 @@
+.containerInfo {
+    margin-left: 55px;
+
+}
+
+/*--- START Form Styles ---*/
+form {
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--darkBlue1);
+}
+
+
+.column {
+    margin-top: 10px;
+    float: left;
+    margin-right: 5%;
+    box-sizing: border-box;
+}
+
+.btn {
+    width: 30%;
+}
+
+.containerInfo:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}

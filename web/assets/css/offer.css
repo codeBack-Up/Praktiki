@@ -1,0 +1,564 @@
+@media (max-width: 41200px) {
+    #map {
+        height: 400px;
+    }
+
+    #infoCompany {
+        border-left: solid;
+    }
+}
+
+@media (max-width: 1300px) {
+    #map {
+        height: 400px;
+    }
+
+    #infoCompany {
+        border-left: solid;
+    }
+}
+
+@media (max-width: 950px) {
+    #map {
+        height: 200px;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    #infoCompany {
+        border-left: none;
+    }
+}
+
+/*--- START HEADER ---*/
+.header {
+    border-bottom: solid;
+    border-color: var(--grey2);
+    border-width: 2px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.information {
+    text-align: left;
+    font-size: 11px;
+    padding-top: 2px;
+}
+
+.company {
+    text-align: center;
+    flex-grow: 1;
+    align-self: flex-start;
+    margin-top: -5px;
+    margin-left: -5%;
+}
+
+.text {
+    margin-top: 15px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.infoEntrepriseOffer {
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+ul li {
+    padding-bottom: 2px;
+}
+
+#apply::before {
+    content: '\f0c1';
+    font-family: FontAwesome;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+#apply:hover {
+    color: var(--white);
+    opacity: 0.69;
+}
+
+#list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#search-bar {
+    margin-bottom: 0;
+}
+
+td {
+    padding: 10px;
+}
+
+#main {
+    display: flex;
+    padding-top: 5px;
+}
+
+#infoOffer {
+    flex: 3;
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#infoCompany {
+    flex: 2;
+    border-color: #707B7C;
+    border-width: 2px;
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+}
+
+/*--- END HEADER ---*/
+
+/*--- START SMALL OFFER ---*/
+.small {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 25px;
+    background: var(--activeGrey);
+    padding: 5px;
+    text-align: center;
+    min-width: 225px;
+    max-width: 305px;
+    height: 225px;
+    word-break: break-word;
+    margin-left: 14%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: var(--textColor3);
+    border: 2.5px solid #F2F2F200;
+    animation: appear 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    overflow: hidden;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.tableResponsive:nth-child(n + 2) {
+    animation-delay: 1s;
+}
+
+.small:hover {
+    cursor: pointer;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, .16);
+    transform: scale3d(1.01, 1.01, 1.01);
+}
+
+.small div {
+    font-size: 11px;
+    padding: 5px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.small .information {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.small .information * {
+    margin: 5px;
+    display: -webkit-box;
+    font-size: 11px;
+}
+
+.small .information p {
+    font-size: 9px;
+    height: 20px;
+    width: 190px;
+}
+
+.small h3 {
+    margin-bottom: 5px;
+    width: 190px;
+    height: 55px;
+    margin-top: -5px;
+}
+
+#commentaireIcon,
+#editIcon,
+#deleteIcon,
+#backIcon,
+#closeIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    opacity: 0.5;
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+}
+
+#commentaireIcon:hover,
+#editIcon:hover,
+#deleteIcon:hover,
+#backIcon:hover,
+#closeIcon:hover {
+    opacity: 0.69;
+}
+
+#editIcon:hover {
+    animation: wiggle 0.4s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+@keyframes wiggleBack {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#commentaireIcon::before {
+    font-family: 'FontAwesome';
+    margin-right: 10px;
+    font-size: 1.8em;
+    content: "\f0e6";
+    vertical-align: middle;
+}
+
+#deleteIcon, #commentaireIcon {
+    height: 35px;
+    width: 35px;
+}
+
+#deleteIcon:hover {
+    animation: wiggle 0.4s ease-in-out infinite;
+}
+
+#backIcon:hover {
+    transform: translateX(-4px);
+}
+
+#commentaireIcon {
+    top: 14px;
+    right: 8%;
+}
+
+#deleteIcon {
+    top: 16px;
+    right: 1%;
+}
+
+#editIcon {
+    top: 18px;
+    right: 60px;
+}
+
+#backIcon {
+    bottom: 3%;
+    left: 2%;
+}
+
+#closeIcon {
+    top: 2%;
+    right: 0;
+}
+
+.mapPin {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.typeExpPro {
+    border-radius: 13px;
+    padding: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    width: max-content;
+    margin-bottom: 5px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#mainContainer:hover {
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, .08);
+}
+
+.Stage > .header > .left > .typeExpPro,
+.Stage > .header > .information > .typeExpPro {
+    border-color: var(--lightpastelPurple);
+    background-color: var(--lightpastelPurple);
+    color: var(--darkPurple);
+}
+
+.Stage:hover > .header > .left > .typeExpPro {
+    box-shadow: 0px 0px 90px 70px #D1C6D6;
+}
+
+.Stage:hover {
+    border-color: var(--pastelPurple);
+    box-shadow: 10px 10px 10px #00000025,
+    -10px -10px 10px #B08AB625;
+}
+
+.Alternance > .header > .left > .typeExpPro,
+.Alternance > .header > .information > .typeExpPro {
+    border-color: var(--lightpastelOrange);
+    background-color: var(--lightpastelOrange);
+    color: var(--darkOrange);
+}
+
+.Alternance:hover > .header > .left > .typeExpPro {
+    box-shadow: 0px 0px 90px 70px #f3dbc2;
+}
+
+.Alternance:hover {
+    border-color: var(--pastelOrange);
+    box-shadow: 10px 10px 10px #00000025,
+    -10px -10px 10px #F8C9A025;
+}
+
+
+.OffreNonDefini > .header > .left > .typeExpPro,
+.OffreNonDefini > .header > .information > .typeExpPro {
+    background: linear-gradient(-45deg, var(--lightpastelPurple) 0%, var(--lightpastelPurple) 50%, var(--lightpastelOrange) 50%, var(--lightpastelOrange) 100%);
+    color: var(--darkBlue2);
+    border-bottom-color: var(--pastelPurple);
+    border-left-color: var(--pastelOrange);
+    border-right-color: var(--pastelPurple);
+    border-top-color: var(--pastelOrange);
+}
+
+.OffreNonDefini > .header > .left > .typeExpPro > label,
+.OffreNonDefini > .header > .information > .typeExpPro > label {
+    background: linear-gradient(-45deg, var(--darkPurple) 0%, var(--darkPurple) 50%, var(--darkOrange) 50%, var(--darkOrange) 100%);
+    color: transparent;
+    border-bottom-color: var(--pastelPurple);
+    border-left-color: var(--pastelOrange);
+    border-right-color: var(--pastelPurple);
+    border-top-color: var(--pastelOrange);
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.small:hover,
+.small {
+    border: none;
+}
+
+.OffreNonDefini:hover > .header > .left > .typeExpPro {
+    box-shadow: 50px 30px 45px 35px #D1C6D6,
+    -50px -30px 45px 35px #f3dbc2;
+}
+
+
+.OffreNonDefini:hover {
+    border-bottom-color: var(--pastelPurple);
+    border-left-color: var(--pastelOrange);
+    border-right-color: var(--pastelPurple);
+    border-top-color: var(--pastelOrange);
+    box-shadow: 10px 10px 10px #00000025,
+    -10px -10px 10px #F8C9A025;
+}
+
+/*--- END SMALL OFFER ---*/
+
+/*--- START POP UP ---*/
+#popUpDelete {
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    word-break: break-word;
+    color: var(--darkBlue2);
+    border: 2.5px solid #F2F2F200;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: -1;
+}
+
+#popUpDeleteNo,
+#popUpDeleteYes {
+    margin: 20px;
+}
+
+@media (max-width: 41200px) {
+    #popUpDelete {
+        min-width: 400px;
+        max-width: 550px;
+        min-height: 169px;
+        height: 169px;
+        max-height: 400px;
+    }
+
+    .popUpDeleteButton > a {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 1300px) {
+    #popUpDelete {
+        min-width: 400px;
+        max-width: 550px;
+        min-height: 169px;
+        height: 169px;
+        max-height: 400px;
+    }
+
+    .popUpDeleteButton > a {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    #popUpDelete {
+        min-width: 280px;
+        max-width: 550px;
+        height: 350px;
+        max-height: 350px;
+    }
+
+    #popUpDeleteContent > p {
+        margin-top: 20px;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .popUpDeleteButton > a {
+        width: 80%;
+        height: 59px;
+    }
+}
+
+#popUpDelete > p {
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#popUpDeleteContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.popUpDeleteButton > a {
+    font-size: 1.2em;
+    margin: 20px;
+    border-radius: 1rem;
+    padding: 5px;
+    text-align: center;
+    word-break: break-word;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#popUpDeleteNo:hover {
+    background-color: var(--lightpastelRed);
+    color: var(--red);
+}
+
+#popUpDeleteNo {
+    background-color: var(--lightpastelRed);
+    color: var(--darkRed);
+}
+
+#popUpDeleteYes:hover {
+    background-color: var(--lightpastelGreen);
+    color: var(--green);
+}
+
+#popUpDeleteYes {
+    background-color: var(--lightpastelGreen);
+    color: var(--darkGreen);
+}
+
+/*--- END POP UP ---*/
+
+.codePostalID::before {
+    content: '\f041';
+    font-family: FontAwesome;
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+#map {
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-bottom: -20px;
+}
+

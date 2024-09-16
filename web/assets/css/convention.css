@@ -1,0 +1,43 @@
+.containerConvention {
+    text-align: left;
+    width: 100%;
+}
+
+.containerConvention label {
+    padding-left: 5px;
+    flex: 0 0 30%;
+    font-size: 15px;
+    margin-top: -15px;
+}
+
+.containerConvention h2 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.container-label-input {
+    display: flex;
+    flex: 1;
+    margin: 5px;
+    align-items: center;
+}
+
+.container-label-input h4 {
+    margin-top: -15px;
+    padding: 5px;
+    font-weight: normal;
+}
+
+form {
+    width: 60%;
+    justify-content: center;
+    margin-left: -30px;
+}
+
+#confidentialite {
+    margin-top: -15px;
+}
+
+button {
+    margin-left: 2%;
+}

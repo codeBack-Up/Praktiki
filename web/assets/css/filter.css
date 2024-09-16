@@ -1,0 +1,338 @@
+#center {
+    position: relative;
+    width: 69%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#sideFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+    margin: 0;
+}
+
+#datePublication {
+    width: 200px;
+}
+
+#optionTri {
+    width: 200px;
+}
+
+input[type="date"] {
+    width: 50%;
+}
+
+#reset {
+    background: var(--white);
+    color: var(--grey0);
+    border: 2px solid var(--lightGrey);
+    width: 100%;
+    height: 44px;
+    padding: 11px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+#reset:not(.active) span:hover {
+    cursor: default;
+}
+
+#reset:hover {
+    color: var(--grey0);
+    cursor: default;
+}
+
+#reset:not(.active):hover span {
+    color: var(--grey0);
+    cursor: default;
+}
+
+#reset.active:hover {
+    background: var(--lightpastelOrange);
+    border-color: var(--lightpastelOrange);
+    color: var(--darkOrange);
+    cursor: pointer;
+}
+
+#reset.active {
+    background: var(--lightpastelYellow);
+    border-color: var(--lightpastelYellow);
+    color: var(--darkYellow);
+}
+
+#reset span::before {
+    content: '\f00d';
+    font-family: 'FontAwesome';
+    float: left;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+.tableResponsive {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tableResponsive > a {
+    text-decoration: none;
+}
+
+.tableResponsive:nth-child(2) > .subContainer {
+    color: var(--green);
+}
+
+#search-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    position: absolute;
+    top: 51%;
+    right: 45px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#search-bar {
+    margin-bottom: 15px;
+    margin-left: 30px;
+    width: 95%;
+}
+
+#searchBarParent {
+    width: 100%;
+}
+
+
+.button-checkbox {
+    background-color: var(--white);
+    padding: 0 0;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: block;
+    width: 170px;
+    height: 44px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--lightpastelBlue);
+}
+
+.button-checkbox input:checked {
+    box-shadow: 10px 10px 20px #00000020,
+    -10px -10px 20px #ffffff45;
+    border-color: var(--lightpastelBlue);
+}
+
+.button-checkbox label {
+    line-height: 3.0em;
+    width: 12.0em;
+    height: 3.0em;
+    user-select: none;
+}
+
+.button-checkbox label span {
+    font-size: 13px;
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+    transition: all 0.15s ease-in-out;
+}
+
+.button-checkbox label input {
+    display: none;
+    position: absolute;
+}
+
+.button-checkbox span::before {
+    content: '\f067';
+    font-family: 'FontAwesome';
+    float: left;
+    margin-left: 15px;
+}
+
+.button-checkbox input[type="checkbox"]:checked + span::before {
+    content: '\f00c';
+}
+
+.button-checkbox input[type="checkbox"]:checked:hover + span::before {
+    content: '\f068';
+}
+
+.stage input:checked {
+    border-color: 5px solid var(--lightpastelBlue);
+}
+
+.stage input:checked + span {
+    background-color: var(--lightpastelBlue);
+    color: var(--pastelBlue);
+    font-weight: bold;
+    box-shadow: 10px 10px 20px #00000020,
+    -10px -10px 20px #ffffff45;
+}
+
+.alternance input:checked + span {
+    background-color: var(--lightpastelBlue);
+    color: var(--pastelBlue);
+    font-weight: bold;
+
+}
+
+/*---START SIDE FILTER---*/
+#sideFilter {
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -30px;
+}
+
+#sideFilter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#datePublication,
+#optionTri {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: var(--white);
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    color: var(--darkBlue1);
+}
+
+#datePublication:invalid,
+#optionTri:invalid {
+    color: var(--grey2);
+}
+
+#datePublication:focus,
+#optionTri:focus {
+    outline: none;
+}
+
+#dateDebut,
+#dateFin {
+    width: 100%;
+}
+
+#codePostal {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: var(--white);
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    color: var(--darkBlue1);
+}
+
+#reset:hover, #rechercher:hover {
+    color: var(--white);
+    opacity: 0.69;
+}
+
+#reset:active, #rechercher:active {
+    color: var(--white);
+    box-shadow: inset 10px 10px 20px #00000020, inset -10px -10px 20px #ffffff45;
+    opacity: 0.8;
+}
+
+#codePostal:invalid {
+    color: var(--grey2);
+}
+
+#codePostal:focus {
+    outline: none;
+}
+
+@media (max-width: 41200px) {
+    .HBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #sideFilter {
+        width: 210px;
+    }
+
+    #datePublication,
+    #optionTri {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .HBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #sideFilter {
+        width: 210px;
+    }
+
+    #datePublication,
+    #optionTri {
+        width: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .HBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    footer.VBox > .HBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    #sideFilter {
+        margin-left: -60px;
+        width: 125px;
+    }
+
+    #datePublication,
+    #optionTri,
+    #dateDebut,
+    #dateFin,
+    .button-checkbox {
+        width: 110px;
+    }
+}
+
+/*---END SIDE FILTER---*/
+
